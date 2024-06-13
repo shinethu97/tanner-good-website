@@ -17,26 +17,38 @@
 }
 #voyager-txt {
   width: 45%;
-  margin-right: 7rem;
+  margin-right: 6rem;
 }
 #voyager-box {
   display: flex;
   padding: 2.5rem;
+  padding-right: 4rem;
   gap: 2rem;
   border: 2px solid goldenrod;
+  position: relative;
 }
-#box-left {
-  background-color: black;
+#voyager-box:after {
+  /* partial border white*/
+  display: block;
+  position: absolute;
+  width: 10rem;
+  bottom: -4.8rem;
+  right: 5rem;
+  background-color: white;
+  /* arrow*/
+  content: '\2193';
+  color: gray;
+  font-size: 5rem;
+  text-align: center;
+  font-style: thin;
 }
-#box-right {
-  background-color: orange;
-}
+
 #box-left,
 #box-right {
   width: 50%;
 }
 #box-left > h1 {
-  margin-left: -24vw;
+  margin-left: -23vw;
 }
 #box-left > h4 {
   text-align: end;
