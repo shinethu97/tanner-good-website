@@ -1,7 +1,10 @@
 #banner {
   width: 100%;
   height: 100vh;
-  position: relative;
+}
+
+#banner-bg {
+  height: 80vh;
   background-image: url('./image/banner.jpg');
   background-position: right;
   background-repeat: no-repeat;
@@ -9,7 +12,6 @@
   display: flex;
   flex-direction: column;
 }
-
 /* Banner Content */
 .right {
   transform: rotate(-45deg);
@@ -30,12 +32,12 @@
   font-family: 'Poppins';
 }
 
-.banner-sub-text{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: 2rem 0 0 4rem;
+.banner-sub-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0 0 4rem;
 }
-.banner-sub-text > hr{
-    width: 2em;
+.banner-sub-text > hr {
+  width: 2em;
 }
