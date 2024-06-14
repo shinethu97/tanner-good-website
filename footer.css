@@ -1,0 +1,63 @@
+#footer {
+  width: 100%;
+  background-color: #e6e7e6;
+  position: relative;
+  bottom: 0;
+  padding: 1rem 3rem;
+  font-size: 0.8rem;
+  margin-top: 2rem;
+}
+#footer-con {
+  display: flex;
+  justify-content: space-between;
+}
+#footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#footer-right > h4,
+#ft-address > h4 {
+  font-weight: 600;
+}
+#ft-left-upper {
+  display: flex;
+  gap: 5rem;
+  flex-direction: row;
+}
+#ft-left-upper > img {
+  width: 7rem;
+  height: 5rem;
+  margin-right: 5rem;
+}
+#ft-left-upper > ul {
+  display: flex;
+  gap: 4rem;
+  font-weight: 500;
+}
+#ft-left-down {
+  display: flex;
+  gap: 6rem;
+}
+#ft-left-down > ul {
+  display: flex;
+  gap: 4rem;
+}
+#footer-right {
+  width: 20%;
+}
+#contact-box > button {
+  padding: 5px 20px;
+  color: white;
+  background-color: black;
+  font-size: 17px;
+}
+
+#contact-box > input {
+  padding: 5px;
+}
