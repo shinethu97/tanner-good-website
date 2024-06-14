@@ -26,7 +26,11 @@ h1 {
   font-size: 3em;
   letter-spacing: 0.2em;
   font-weight: 600;
-  
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
 }
 h4 {
   font-weight: 300;
@@ -38,9 +42,9 @@ h4 {
   margin: auto;
 }
 
-.container2{
-    width: 75%;
-    margin: auto;
+.container2 {
+  width: 75%;
+  margin: auto;
 }
 
 /* nav bar*/
@@ -98,12 +102,4 @@ h4 {
   left: 1%;
   top: 0;
   z-index: 2;
-}
-.horizontal-bar{
-    font-size: 1em;
-    transform: scale(5,1.15);
-}
-.number{
-    color: gray;
-    font-size: 3em;
 }
