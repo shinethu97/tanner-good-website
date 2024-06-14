@@ -106,9 +106,6 @@
   margin-top: -5rem;
 }
 
-#col-01-bottom-text {
-  width: 55%;
-}
 #col-01-bottom-photo {
   width: 40%;
   display: flex;
@@ -117,6 +114,7 @@
   background-color: white;
 }
 #col-01-bottom-text {
+  width: 55%;
   display: flex;
   gap: 1rem;
   flex-direction: column;
@@ -124,7 +122,7 @@
   padding: 4rem 0 0 8rem;
 }
 #col-01-bottom-text > h3 {
-  background: linear-gradient(#fff 50%, orange 50%);
+  background: linear-gradient(#fff 50%, lightgray 50%);
   width: fit-content;
 }
 
