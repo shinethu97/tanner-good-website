@@ -30,7 +30,8 @@
 
 /* collection sub title*/
 #col-01-title,
-#col-02-title {
+#col-02-title,
+#col-03-title {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -42,6 +43,10 @@
 
 #col-02-title {
   justify-content: center;
+}
+
+#col-03-title {
+  justify-content: end;
 }
 
 /* html symbols (bars)*/
@@ -164,7 +169,8 @@
 
 /* collection part 02 */
 
-#col-02-content {
+#col-02-content,
+#col-03-content {
   display: flex;
   gap: 1rem;
   width: 90%;
@@ -190,3 +196,33 @@
   margin: 0 0 0 auto;
 }
 /* end collection part 02 */
+
+/* collection part 03 */
+
+#col-03 {
+  margin-top: -8rem;
+}
+
+#col-03-content {
+  align-items: center;
+}
+
+#col-03-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin: auto -2.5rem 5% 0;
+}
+#col-03-text > h1 {
+  text-align: end;
+  color: white;
+  text-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+}
+#col-03-photo {
+  width: 60%;
+  z-index: -1;
+}
+
+#col-03-photo > img {
+  width: 100%;
+}
