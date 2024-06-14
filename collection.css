@@ -28,15 +28,20 @@
   width: 30rem;
 }
 
-/* Collection Part 01 */
-#col-01 {
-  margin-top: 3rem;
-}
-#col-01-title {
+/* collection sub title*/
+#col-01-title,
+#col-02-title {
   display: flex;
   flex-direction: row;
+  gap: 1rem;
+}
+
+#col-01-title {
   align-items: center;
-  gap: 1.5rem;
+}
+
+#col-02-title {
+  justify-content: center;
 }
 
 /* html symbols (bars)*/
@@ -55,6 +60,12 @@
 .number {
   color: gray;
   font-size: 3em;
+  height: 1.2em;
+}
+
+/* Collection Part 01 */
+#col-01 {
+  margin-top: 3rem;
 }
 
 #col-01-photo {
@@ -106,6 +117,7 @@
   margin-top: -5rem;
 }
 
+/* 2 in 1 photo*/
 #col-01-bottom-photo {
   width: 40%;
   display: flex;
@@ -113,6 +125,7 @@
   gap: 1rem;
   background-color: white;
 }
+
 #col-01-bottom-text {
   width: 55%;
   display: flex;
@@ -148,3 +161,32 @@
   width: 70%;
   margin: 0 3.5rem 0 auto;
 }
+
+/* collection part 02 */
+
+#col-02-content {
+  display: flex;
+  gap: 1rem;
+  width: 90%;
+  margin: 0 0 0 10%;
+}
+
+#col-02-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+#col-02-photo {
+  width: 45%;
+  display: flex;
+  gap: 1rem;
+  background-color: white;
+  padding: 0 1rem 1rem 1rem;
+}
+
+#col-02-text-ctx {
+  width: 80%;
+  margin: 0 0 0 auto;
+}
+/* end collection part 02 */
