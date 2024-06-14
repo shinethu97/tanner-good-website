@@ -1,40 +1,43 @@
-#voyager {
+#drifter {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   position: relative;
   background-image: url('./image/voyager.png');
   background-repeat: no-repeat;
-  background-size: 70% 80%;
+  background-size: 70% 60%;
+  padding-top: 20vh;
   display: flex;
   flex-direction: column;
+  background-color: #e9e7e7;
+  background-position: right;
 }
-
-#voyager-content {
-  height: 80%;
+#drifter-content {
+  height: 60vh;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: start;
 }
-#voyager-txt {
+#drifter-txt {
   width: 45%;
-  margin-right: 6rem;
+  margin-left: 6rem;
 }
-#voyager-box {
+#drifter-box {
   display: flex;
   padding: 2.5rem;
-  padding-right: 4rem;
+  padding-right: 0rem;
   gap: 2rem;
   border: 2px solid goldenrod;
   position: relative;
 }
-#voyager-box:after {
+
+#drifter-box:after {
   /* partial border white*/
   display: block;
   position: absolute;
   width: 10rem;
   bottom: -4.8rem;
-  right: 5rem;
-  background-color: white;
+  left: 5rem;
+  background-color: #e9e7e7;
   /* arrow*/
   content: '\2193';
   color: gray;
@@ -44,23 +47,12 @@
   transform: scale(1, 4);
 }
 
-#box-left,
-#box-right {
-  width: 50%;
-}
-
-#box-left {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#box-left > h1 {
-  margin-left: -23vw;
+.drifter-box > h1 {
+  margin-right: -52vw;
   margin-top: 2rem;
 }
-#box-left > h4 {
+
+.drifter-box > h4 {
   width: 100%;
-  text-align: end;
-  margin-right: 0rem;
+  text-align: start;
 }

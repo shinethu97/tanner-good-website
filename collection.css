@@ -1,0 +1,52 @@
+#collection{
+    width: 100%;
+    height: 100vh;
+    padding-top: 5rem;
+}
+
+#collection-title{
+    text-align: center;
+}
+
+#collection-sub-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+#collection-sub-title-txt {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    align-items: center;
+    justify-content: start;
+
+    
+}
+#collection-sub-title-txt > h4 {
+    background-color: pink;
+    width: 30rem;
+
+}
+
+.horizontal-bar {
+    content: "\2015";
+    transform: scale(4, 1);
+}
+.bg-pink{
+    background-color: pink;
+
+}
+#col-01{
+    margin-top: 3rem;
+}
+#col-01-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+.number-bar{
+    font-size: 1em;
+    transform: scale(4,1.15);
+}
