@@ -24,7 +24,7 @@
   justify-content: start;
 }
 #collection-sub-title-txt > h4 {
-  background-color: pink;
+  background-color: var(--primary-color);
   width: 30rem;
 }
 
@@ -101,7 +101,7 @@
 #col-01-logo {
   display: flex;
   flex-direction: row;
-  height: 100px;
+  height: auto;
   align-items: center;
   gap: 1rem;
 }
@@ -114,6 +114,9 @@
   background-color: yellow;
 }
 
+#col-01-text > p {
+  text-align: justify;
+}
 /* end collection part 1 (upper part) */
 
 /* Collectection part 1 Bottom Part */
@@ -188,7 +191,7 @@
   display: flex;
   gap: 1rem;
   background-color: white;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 1rem 1rem 0;
 }
 
 #col-02-text-ctx {
@@ -225,4 +228,243 @@
 
 #col-03-photo > img {
   width: 100%;
+}
+
+/* Styles for screens less than 768px wide */
+@media screen and (max-width: 768px) {
+  /* header part*/
+  #collection-sub-title-txt > h4 {
+    width: auto;
+  }
+  .container2 {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  /* row 1*/
+  #col-01-text,
+  #col-01-logo {
+    gap: 0.5rem;
+  }
+
+  #col-01-photo {
+    padding: 0;
+    height: auto;
+    gap: 0.8rem;
+  }
+
+  #col-01-text {
+    flex-grow: 1;
+    padding: 0;
+  }
+
+  .img-box {
+    width: 45%;
+    height: 16rem;
+  }
+
+  #col-01-logo > img {
+    width: 50px;
+    background-color: yellow;
+  }
+
+  /* line */
+
+  .vertical-bar {
+    transform: scale(1, 2);
+  }
+  .number {
+    font-size: 2em;
+  }
+
+  .horizontal-bar {
+    transform: scale(2, 1.15);
+  }
+
+  #col-01-logo > .bar {
+    transform: scale(1, 4);
+    height: auto;
+  }
+
+  /*row 2*/
+  #col-01-bottom {
+    margin-top: -2rem;
+  }
+
+  #col-01-bottom-text {
+    padding: 0;
+    padding-left: 7%;
+    gap: 0.5rem;
+    flex-grow: 1;
+  }
+  #col-01-bottom-text > .bar {
+    transform: scale(1, 4);
+    margin-bottom: 1rem;
+    height: auto;
+  }
+
+  #col-01-bottom-text > div > p,
+  #col-01-bottom-text > div > span {
+    margin: 0 1rem;
+    width: 90%;
+  }
+  #col-01-bottom-photo {
+    padding: 0.5em 0 0 0.5em;
+    background-color: white;
+    width: 45%;
+    gap: 0.5rem;
+  }
+
+  #col-01-bottom-photo > img,
+  #col-02-photo > img {
+    height: 12rem;
+    width: 48%;
+  }
+
+  /*col2*/
+  #col-02-photo {
+    padding: 0 0.5em 0.5em 0;
+    background-color: white;
+    /* width: 45%; */
+    gap: 0.5rem;
+  }
+  #col-02-text {
+    padding: 0;
+    gap: 0.5rem;
+    flex-grow: 1;
+  }
+  #col-02-text-ctx {
+    width: 90%;
+  }
+
+  /*col3*/
+  #col-03 {
+    margin-top: -4rem;
+  }
+  #col-03-content {
+    gap: 1.8rem;
+  }
+}
+
+/* from a minimun width of 768px and bigger  */
+@media (min-width: 768px) and (max-width: 959px) {
+  /* header part*/
+  #collection-sub-title-txt > h4 {
+    width: 20rem;
+  }
+
+  /* line */
+  .vertical-bar {
+    transform: scale(1, 2.5);
+  }
+  .number {
+    font-size: 1.8em;
+  }
+
+  .horizontal-bar {
+    transform: scale(3, 1.15);
+  }
+
+  #col-01-logo > .bar {
+    transform: scale(1, 5);
+    height: auto;
+  }
+  /* row 1 */
+
+  #col-01-text {
+    padding: 1rem 0 0 1rem;
+    flex-grow: 1;
+  }
+  #col-01-bottom-text > .bar {
+    transform: scale(1, 5);
+    margin-bottom: 1rem;
+    height: auto;
+  }
+  /* row 2*/
+  #col-01-bottom {
+    margin-top: -3rem;
+  }
+
+  #col-02-photo > img,
+  #col-01-bottom-photo > img {
+    height: 15rem;
+  }
+  #col-01-bottom-photo,
+  #col-02-photo {
+    width: 50%;
+  }
+  #col-01-bottom-text {
+    padding: 0;
+    padding-left: 10%;
+    flex-grow: 1;
+  }
+
+  #col-01-bottom-text > div > p,
+  #col-01-bottom-text > div > span {
+    margin: 0 auto;
+    padding: 0;
+    width: 60%;
+  }
+
+  /*col3*/
+  #col-03 {
+    margin-top: -4rem;
+  }
+  #col-03-content {
+    gap: 1.8rem;
+  }
+}
+
+/* from a minimun width of 960px and 1024  */
+@media (min-width: 960px) and (max-width: 1024px) {
+  /*lines */
+
+  #col-01-logo > .bar {
+    transform: scale(1, 6);
+    height: auto;
+  }
+  /* row 1 */
+
+  #col-01-text {
+    padding: 1rem 0 0 1rem;
+    flex-grow: 1;
+  }
+  #col-01-bottom-text > .bar {
+    transform: scale(1, 5);
+    margin-bottom: 1rem;
+    height: auto;
+  }
+  /* row 2*/
+  #col-01-bottom {
+    margin-top: -3rem;
+  }
+
+  #col-02-photo > img,
+  #col-01-bottom-photo > img {
+    height: 15rem;
+  }
+  #col-01-bottom-photo,
+  #col-02-photo {
+    width: 50%;
+  }
+  #col-01-bottom-text {
+    padding: 0;
+    padding-left: 10%;
+    flex-grow: 1;
+  }
+
+  #col-01-bottom-text > div > p,
+  #col-01-bottom-text > div > span {
+    margin: 0 auto;
+    padding: 0;
+    width: 60%;
+  }
+
+  /*col3*/
+  #col-03 {
+    margin-top: -6rem;
+  }
+  #col-03-content {
+    gap: 1.8rem;
+  }
 }
