@@ -10,7 +10,7 @@
 #drifter-content {
   background-position: center right;
   background-size: 70% 100%;
-  background-image: url('./image/drifter.png');
+  background-image: url('../image/drifter.png');
   background-repeat: no-repeat;
   height: 65%;
   display: flex;
@@ -68,7 +68,7 @@
 
   #drifter-content {
     background-size: 50% 95%;
-    background-image: url('./image/drifter-mobile.png');
+    background-image: url('../image/drifter-mobile.png');
   }
   #drifter-txt {
     width: 90%;

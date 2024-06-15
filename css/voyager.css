@@ -9,7 +9,7 @@
 #voyager-content {
   height: 80%;
   display: flex;
-  background-image: url('./image/voyager.png');
+  background-image: url('../image/voyager.png');
   background-repeat: no-repeat;
   background-position: center left;
   background-size: 70% 100%;
@@ -75,7 +75,7 @@
 
   #voyager-content {
     background-size: 50% 80%;
-    background-image: url('./image/voyager-mobile.png');
+    background-image: url('../image/voyager-mobile.png');
   }
   #voyager-txt {
     width: 90%;
