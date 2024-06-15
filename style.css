@@ -4,6 +4,7 @@
   box-sizing: border-box;
   list-style: none;
   font-family: 'Poppins';
+  font-size: 16px;
 }
 
 :root {
@@ -102,4 +103,88 @@ h4 {
   left: 1%;
   top: 0;
   z-index: 2;
+}
+/*mobile sidenav drawer */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+#mobile-side-nav {
+  display: none;
+}
+/* Styles for screens less than 768px wide */
+@media screen and (max-width: 768px) {
+  * {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+  }
+  /* menu bar */
+  #side-bar,
+  nav {
+    display: none;
+  }
+
+  #mobile-side-nav {
+    position: fixed;
+    left: 1rem;
+    top: 0;
+    display: flex;
+    z-index: 2; /* Ensure it's on top */
+  }
+
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* from a minimun width of 768px and bigger  */
+@media (min-width: 768px) and (max-width: 959px) {
+  * {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 2.5em;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+  }
+}
+
+/* from a minimun width of 960px and bigger  */
+@media screen and (min-width: 960px) {
 }

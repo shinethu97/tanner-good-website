@@ -35,3 +35,50 @@
 .banner-sub-text > hr {
   width: 2em;
 }
+
+/* Styles for screens less than 768px wide */
+@media screen and (max-width: 768px) {
+  #banner {
+    height: 400px;
+    width: 100%;
+  }
+
+  #banner-bg {
+    height: 300px;
+  }
+  .banner-sub-text {
+    margin: 1rem 0 0 1rem;
+  }
+}
+
+/* from a minimun width of 768px and bigger  */
+@media (min-width: 768px) and (max-width: 959px) {
+  #banner {
+    height: 600px;
+    width: 100%;
+  }
+
+  #banner-bg {
+    height: 500px;
+    background-size: 58% 100%;
+  }
+  .banner-sub-text {
+    margin: 1rem 0 0 1rem;
+  }
+}
+
+/* from a minimun width of 960px and bigger  */
+@media screen and (min-width: 960px) {
+  #banner {
+    height: 700px;
+    width: 100%;
+  }
+
+  #banner-bg {
+    height: 550px;
+    background-size: 60% 100%;
+  }
+  .banner-sub-text {
+    margin: 1rem 0 0 3rem;
+  }
+}

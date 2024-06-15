@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 minimum-scale=1"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,6 +38,24 @@
         </ul>
       </div>
     </nav>
+    <div id="mobile-side-nav">
+      <span
+        style="font-size: 30px; cursor: pointer; width: 12rem;"
+        onclick="openNav()"
+      >
+        &#9776;
+      </span>
+    </div>
+    <div id="mySidenav" class="sidenav" onclick="closeNav()">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        &times;
+      </a>
+      <a href="#banner">NAVY SALT</a>
+      <a href="#voyager">VOYAGER</a>
+      <a href="#drifter">DRIFTER</a>
+      <a href="#collection">COLLECTION</a>
+      <a href="#footer">CONTACT</a>
+    </div>
     <section id="banner">
       <div id="banner-bg">
         <nav>
@@ -283,5 +304,15 @@
         </div>
       </div>
     </section>
+    <script>
+      function openNav() {
+        document.getElementById('mySidenav').style.width = '90vw'
+        document.getElementById('mySidenav').style.zIndex = '3'
+      }
+
+      function closeNav() {
+        document.getElementById('mySidenav').style.width = '0'
+      }
+    </script>
   </body>
 </html>
