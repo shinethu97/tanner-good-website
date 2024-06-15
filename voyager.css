@@ -2,9 +2,6 @@
   width: 100%;
   height: 80vh;
   position: relative;
-  background-image: url('./image/voyager.png');
-  background-repeat: no-repeat;
-  background-size: 70% 80%;
   display: flex;
   flex-direction: column;
 }
@@ -12,6 +9,10 @@
 #voyager-content {
   height: 80%;
   display: flex;
+  background-image: url('./image/voyager.png');
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 70% 100%;
   align-items: center;
   justify-content: end;
 }
@@ -24,7 +25,7 @@
   padding: 2.5rem;
   padding-right: 4rem;
   gap: 2rem;
-  border: 2px solid goldenrod;
+  border: 2px solid var(--primary-color);
   position: relative;
 }
 #voyager-box:after {
@@ -63,4 +64,108 @@
   width: 100%;
   text-align: end;
   margin-right: 0rem;
+}
+
+/* Styles for screens less than 768px wide */
+@media screen and (max-width: 768px) {
+  #voyager {
+    height: 320px;
+    width: 100%;
+  }
+
+  #voyager-content {
+    background-size: 50% 80%;
+    background-image: url('./image/voyager-mobile.png');
+  }
+  #voyager-txt {
+    width: 90%;
+    margin-right: 3%;
+  }
+  #voyager-box {
+    padding: 1rem;
+    padding-right: 1rem;
+    gap: 1rem;
+  }
+
+  #box-left > h1 {
+    margin-left: -2%;
+    margin-top: 1rem;
+  }
+
+  #box-left > h4 {
+    margin-right: 2rem;
+  }
+
+  #voyager-box:after {
+    /* partial border white*/
+    width: 50px;
+    bottom: -4rem;
+    /* arrow*/
+    transform: scale(1, 2);
+  }
+}
+
+/* from a minimun width of 768px and bigger  */
+@media (min-width: 768px) and (max-width: 959px) {
+  #voyager {
+    width: 100%;
+    height: auto;
+  }
+
+  #voyager-content {
+    height: 450px;
+    background-size: 70% 65%;
+  }
+  #voyager-txt {
+    width: 60%;
+    margin-right: 1%;
+  }
+  #voyager-box {
+    padding: 2rem;
+    padding-right: 1rem;
+    gap: 1rem;
+  }
+
+  #box-left > h1 {
+    margin-left: -100%;
+    margin-top: 1rem;
+  }
+
+  #voyager-box:after {
+    width: 50px;
+    bottom: -4rem;
+    transform: scale(1, 2);
+  }
+}
+/* from a minimun width of 960px and 1024  */
+@media (min-width: 960px) and (max-width: 1024px) {
+  #voyager {
+    width: 100%;
+    height: auto;
+  }
+
+  #voyager-content {
+    height: 600px;
+    background-size: 65% 60%;
+  }
+  #voyager-txt {
+    width: 60%;
+    margin-right: 6%;
+  }
+  #voyager-box {
+    padding: 2rem;
+    padding-right: 1rem;
+    gap: 2rem;
+  }
+
+  #box-left > h1 {
+    margin-left: -70%;
+    margin-top: 1rem;
+  }
+
+  #voyager-box:after {
+    width: 50px;
+    bottom: -4rem;
+    transform: scale(1, 3);
+  }
 }
