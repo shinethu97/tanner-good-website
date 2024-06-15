@@ -88,7 +88,7 @@
 }
 
 #col-01-text {
-  padding: 3rem 0 0 3rem;
+  padding: 6rem 0 0 3rem;
   width: 35%;
   display: flex;
   flex-direction: column;
@@ -106,12 +106,13 @@
   gap: 1rem;
 }
 #col-01-logo > .bar {
-  transform: scale(1, 10);
+  transform: scale(1, 8);
   height: 1.3rem;
+  margin-top: 3rem;
 }
 #col-01-logo > img {
   width: 100px;
-  background-color: yellow;
+  height: auto;
 }
 
 #col-01-text > p {
@@ -244,7 +245,7 @@
   /* row 1*/
   #col-01-text,
   #col-01-logo {
-    gap: 0.5rem;
+    gap: 0.3rem;
   }
 
   #col-01-photo {
@@ -265,7 +266,7 @@
 
   #col-01-logo > img {
     width: 50px;
-    background-color: yellow;
+    height: auto;
   }
 
   /* line */
@@ -375,6 +376,12 @@
     padding: 1rem 0 0 1rem;
     flex-grow: 1;
   }
+
+  #col-01-logo > img {
+    width: 50px;
+    height: auto;
+    margin-top: -3rem;
+  }
   #col-01-bottom-text > .bar {
     transform: scale(1, 5);
     margin-bottom: 1rem;
@@ -422,6 +429,12 @@
   #col-01-logo > .bar {
     transform: scale(1, 6);
     height: auto;
+  }
+
+  #col-01-logo > img {
+    width: 80px;
+    height: auto;
+    margin-top: -3rem;
   }
   /* row 1 */
 

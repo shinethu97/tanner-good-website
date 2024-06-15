@@ -25,16 +25,18 @@
   <body>
     <nav id="sideBar">
       <div>
-        <div class="logo"></div>
+        <div class="logo">
+          <img src="./image/logo-dark.png" />
+        </div>
         <ul id="page-no">
-          <li><i class="arrow up"></i></li>
-          <li><i class="arrow down"></i></li>
-          <li>|</li>
-          <li>01</li>
-          <li>02</li>
-          <li>03</li>
-          <li>04</li>
-          <li>05</li>
+          <li onclick="prevSection()"><i class="arrow up arrow-off"></i></li>
+          <li onclick="nextSection()"><i class="arrow down"></i></li>
+          <li class="bar">&#124;</li>
+          <li><a href="#banner" class="nav_link active-side-item">01</a></li>
+          <li><a href="#voyager" class="nav_link">02</a></li>
+          <li><a href="#drifter" class="nav_link">03</a></li>
+          <li><a href="#collection" class="nav_link">04</a></li>
+          <li><a href="#footer" class="nav_link footer-nav">05</a></li>
         </ul>
       </div>
     </nav>
@@ -56,16 +58,25 @@
       <a href="#collection">COLLECTION</a>
       <a href="#footer">CONTACT</a>
     </div>
-    <section id="banner">
+    <section id="banner" class="section">
       <div id="banner-bg">
         <nav>
           <ul id="navbar">
-            <li class="nav-item"></li>
-            <li class="nav-item">NAVY SALT</li>
-            <li class="nav-item">VOYAGER</li>
-            <li class="nav-item white">DRIFTER</li>
-            <li class="nav-item white">COLLECTION</li>
-            <li class="nav-item white">CONTACT</li>
+            <li class="nav-item nav-item-active">
+              <a href="#banner" class="black">NAVY SALT</a>
+            </li>
+            <li class="nav-item">
+              <a href="#voyager" class="black">VOYAGER</a>
+            </li>
+            <li class="nav-item">
+              <a href="#drifter" class="white">DRIFTER</a>
+            </li>
+            <li class="nav-item">
+              <a href="#collection" class="white">COLLECTION</a>
+            </li>
+            <li class="nav-item">
+              <a href="#footer" class="white">CONTACT</a>
+            </li>
           </ul>
         </nav>
         <div id="banner-content">
@@ -81,7 +92,7 @@
         </div>
       </div>
     </section>
-    <section id="voyager">
+    <section id="voyager" class="section">
       <div id="voyager-content">
         <div id="voyager-txt">
           <div id="voyager-box">
@@ -103,7 +114,7 @@
       </div>
     </section>
 
-    <section id="drifter">
+    <section id="drifter" class="section">
       <div id="drifter-content">
         <div id="drifter-txt">
           <div id="drifter-box">
@@ -125,7 +136,7 @@
       </div>
     </section>
 
-    <section id="collection">
+    <section id="collection" class="section">
       <!-- collection header -->
       <div id="collection-header" class="container">
         <h1 class="uppercase" id="collection-title">Tunner collections</h1>
@@ -164,7 +175,7 @@
             </span>
             <div id="col-01-logo">
               <span class="bar">&#124;</span>
-              <img src="./image/item1.png" id="col-01-logo-img" />
+              <img src="./image/logo-gray.png" id="col-01-logo-img" />
             </div>
           </div>
         </div>
@@ -255,7 +266,7 @@
       <!--End Sale Item -->
     </section>
 
-    <section id="footer">
+    <section id="footer" class="section">
       <div id="footer-con">
         <div id="footer-left">
           <div id="ft-left-upper">
@@ -310,6 +321,73 @@
 
       function closeNav() {
         document.getElementById('mySidenav').style.width = '0'
+      }
+
+      const navLinkEls = document.querySelectorAll('.nav_link')
+      const sectionEls = document.querySelectorAll('.section')
+      const footer = document.querySelector('.footer-nav')
+
+      var currentSection = 'banner'
+      var currentSectionId = 0
+      var sectionArr = ['banner', 'voyager', 'drifter', 'collection', 'footer']
+
+      window.addEventListener('scroll', () => {
+        currentSectionId = sectionArr.indexOf(currentSection)
+
+        sectionEls.forEach((sectionEl) => {
+          if (window.scrollY + 15 >= sectionEl.offsetTop) {
+            currentSection = sectionEl.id
+          }
+        })
+        navLinkEls.forEach((navLinkEl) => {
+          if (navLinkEl.href.includes(currentSection)) {
+            document
+              .querySelector('.active-side-item')
+              .classList.remove('active-side-item')
+            navLinkEl.classList.add('active-side-item')
+          }
+        })
+
+        if (
+          window.pageYOffset + window.innerHeight + 3 >=
+          document.body.scrollHeight
+        ) {
+          document
+            .querySelector('.active-side-item')
+            .classList.remove('active-side-item')
+          footer.classList.add('active-side-item')
+          currentSectionId = 4
+        }
+      })
+      let downArrow = document.querySelector('.down')
+      let upArrow = document.querySelector('.up')
+
+      const prevSection = () => {
+        if (currentSectionId == 0) {
+          return
+        }
+        currentSectionId -= 1
+        document.getElementById(sectionArr[currentSectionId]).scrollIntoView()
+        if (currentSectionId < sectionArr.length - 1) {
+          downArrow.classList.remove('arrow-off')
+        }
+        if (currentSectionId == 0) {
+          upArrow.classList.add('arrow-off')
+        }
+      }
+      const nextSection = () => {
+        if (currentSectionId == sectionArr.length - 1) {
+          return
+        }
+        currentSectionId += 1
+        document.getElementById(sectionArr[currentSectionId]).scrollIntoView()
+        if (currentSectionId > 0) {
+          upArrow.classList.remove('arrow-off')
+        }
+        if (currentSectionId == sectionArr.length - 1) {
+          downArrow.classList.add('arrow-off')
+          return
+        }
       }
     </script>
   </body>
