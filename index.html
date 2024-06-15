@@ -25,18 +25,30 @@
   <body>
     <nav id="sideBar">
       <div>
-        <div class="logo">
-          <img src="./image/logo-dark.png" />
-        </div>
+        <a href="#banner">
+          <div class="logo">
+            <img src="./image/logo-dark.png" />
+          </div>
+        </a>
         <ul id="page-no">
-          <li onclick="prevSection()"><i class="arrow up arrow-off"></i></li>
-          <li onclick="nextSection()"><i class="arrow down"></i></li>
+          <li onclick="prevSection()" class="hover-txt2">
+            <i class="arrow up arrow-off"></i>
+          </li>
+          <li onclick="nextSection()" class="hover-txt2">
+            <i class="arrow down"></i>
+          </li>
           <li class="bar">&#124;</li>
-          <li><a href="#banner" class="nav_link active-side-item">01</a></li>
-          <li><a href="#voyager" class="nav_link">02</a></li>
-          <li><a href="#drifter" class="nav_link">03</a></li>
-          <li><a href="#collection" class="nav_link">04</a></li>
-          <li><a href="#footer" class="nav_link footer-nav">05</a></li>
+          <li class="hover-txt2">
+            <a href="#banner" class="nav_link active-side-item">01</a>
+          </li>
+          <li class="hover-txt2"><a href="#voyager" class="nav_link">02</a></li>
+          <li class="hover-txt2"><a href="#drifter" class="nav_link">03</a></li>
+          <li class="hover-txt2">
+            <a href="#collection" class="nav_link">04</a>
+          </li>
+          <li class="hover-txt2">
+            <a href="#footer" class="nav_link footer-nav">05</a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -83,7 +95,7 @@
           <div id="banner-txt">
             <h4>Designed for utility</h4>
             <h1 class="uppercase">Navy Salt & Pepper</h1>
-            <div class="banner-sub-text">
+            <div class="banner-sub-text hover-txt">
               <span class="bar">&#8213;</span>
               <span>Gear UP</span>
               <span>&#62;</span>
@@ -169,7 +181,7 @@
               This bag can be carried by hand, worn as a backpack or slung over
               a shoulder depending on your traveling needs
             </p>
-            <span class="uppercase read-more">
+            <span class="uppercase read-more hover-txt">
               read more &nbsp;
               <span class="bar">&#62;</span>
             </span>
@@ -190,7 +202,7 @@
               luggage that's just as comfortable outdoors as it is in an
               overhand compartment
             </p>
-            <span class="uppercase read-more">
+            <span class="uppercase read-more hover-txt">
               read more &nbsp;
               <span class="bar">&#62;</span>
             </span>
@@ -222,7 +234,7 @@
                   of luggage that's just as comfortable outdoors as it is in an
                   overhand compartment
                 </p>
-                <span class="uppercase read-more">
+                <span class="uppercase read-more hover-txt">
                   read more &nbsp;
                   <span class="bar">&#62;</span>
                 </span>
@@ -272,11 +284,11 @@
           <div id="ft-left-upper">
             <img src="./image/logo-dark.png" />
             <ul>
-              <li class="nav-item-active">FINDA</li>
-              <li>STORE</li>
-              <li>SIZING</li>
-              <li>CARE</li>
-              <li>WATCH</li>
+              <li class="nav-item-active hover-txt">FINDA</li>
+              <li class="hover-txt">STORE</li>
+              <li class="hover-txt">SIZING</li>
+              <li class="hover-txt">CARE</li>
+              <li class="hover-txt">WATCH</li>
             </ul>
             <hr class="break-line" />
             <div id="ft-address">
@@ -293,12 +305,12 @@
           <div id="ft-left-down">
             <span>&#169;TANNER GOODS PORTLAND ORE 2016</span>
             <ul>
-              <li>facebook</li>
-              <li class="nav-item-active">
+              <li class="hover-txt">facebook</li>
+              <li class="nav-item-active hover-txt">
                 pinterest
               </li>
-              <li>twitter</li>
-              <li>instagram</li>
+              <li class="hover-txt">twitter</li>
+              <li class="hover-txt">instagram</li>
             </ul>
           </div>
         </div>
@@ -308,7 +320,9 @@
           <p>Sign up for new TANNER GOODS content updates, surveys & offers.</p>
           <div id="contact-box">
             <input type="text" id="ft-contact-input" class="" />
-            <button id="ft-contact-btn" class=""><span>></span></button>
+            <button id="ft-contact-btn" class="hover-txt">
+              <span>></span>
+            </button>
           </div>
         </div>
       </div>
